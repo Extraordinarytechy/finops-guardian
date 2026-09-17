@@ -1,14 +1,18 @@
 # Terraform state files
 *.tfstate
 *.tfstate.backup
+*.tfstate.*
 
 # Terraform local configuration
 .terraform/
-terraform.tfvars
 .terraform.lock.hcl
-terraform.tfstate.backup
-terraform.tfstate
+terraform.tfvars
 
-
-# Lambda build artifacts
+# Lambda build artifacts (match any case / path)
+*.zip
+Lambda/*.zip
 lambda/*.zip
+
+# Python
+__pycache__/
+*.pyc
